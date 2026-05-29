@@ -4,7 +4,7 @@ import { calculateGrade, GRADE_STYLES, extractField } from "../utils/grading";
 import { formatFileSize } from "../utils/csv";
 import type { UploadFormat } from "../utils/csv";
 import { FileUploadZone } from "./FileUploadZone";
-import type { BatchLoanResult, BatchSummary, PipelineNode, SchemaType, StreamEvent } from "../types";
+import type { BatchLoanResult, BatchSummary, NodeStatus, PipelineNode, SchemaType, StreamEvent } from "../types";
 import { downloadContractPDF } from "../utils/pdf";
 
 // ── Types ────────────────────────────────────────────────────────────────────
@@ -63,7 +63,7 @@ function rowsFromResults(results: BatchLoanResult[]): LoanRow[] {
     status: "complete" as RowStatus,
     nodes: [
       { id: "validator"             as const, label: "Validator", status: "complete"                                            as const },
-      { id: "contract_generator"    as const, label: "Contract",  status: (r.response.validation.is_valid ? "complete" : "skipped") as const },
+      { id: "contract_generator"    as const, label: "Contract",  status: (r.response.validation.is_valid ? "complete" : "skipped") as NodeStatus },
       { id: "schema_drift_detector" as const, label: "Drift",     status: "complete"                                            as const },
     ],
     result: r,
