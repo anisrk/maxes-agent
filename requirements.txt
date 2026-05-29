@@ -1,5 +1,10 @@
 langgraph
 langchain-anthropic
+langchain-core
 fastapi
 uvicorn
 python-dotenv
+pydantic
+pyyaml
+xmltodict
+typing-extensions
