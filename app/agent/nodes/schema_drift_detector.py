@@ -1,5 +1,6 @@
 from langchain_anthropic import ChatAnthropic
 from langchain_core.messages import SystemMessage, HumanMessage
+from langsmith import traceable
 from app.agent.state import AgentState
 from app.schemas import DriftReport
 import json
@@ -55,6 +56,7 @@ Return ONLY valid JSON:
 }"""
 
 
+@traceable(name="schema_drift_detector", run_type="chain")
 def schema_drift_detector_node(state: AgentState) -> AgentState:
     loan_data = state["loan_data"]
     reference_schema = state.get("reference_schema") or CANONICAL_SCHEMA

@@ -1,5 +1,6 @@
 from langchain_anthropic import ChatAnthropic
 from langchain_core.messages import SystemMessage, HumanMessage
+from langsmith import traceable
 from app.agent.state import AgentState
 from app.schemas import ContractResult
 import json
@@ -36,6 +37,7 @@ Return ONLY valid JSON in this format:
 }"""
 
 
+@traceable(name="contract_generator", run_type="chain")
 def contract_generator_node(state: AgentState) -> AgentState:
     validation = state.get("validation_result")
     if not validation or not validation.is_valid:

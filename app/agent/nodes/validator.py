@@ -1,5 +1,6 @@
 from langchain_anthropic import ChatAnthropic
 from langchain_core.messages import SystemMessage, HumanMessage
+from langsmith import traceable
 from app.agent.state import AgentState
 from app.schemas import ValidationResult
 import json
@@ -104,6 +105,7 @@ def _build_system_prompt(schema_type: str) -> str:
     )
 
 
+@traceable(name="validator", run_type="chain")
 def validator_node(state: AgentState) -> AgentState:
     loan_data = state["loan_data"]
     schema_type = state.get("schema_type", "conventional")

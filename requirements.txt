@@ -1,6 +1,7 @@
 langgraph
 langchain-anthropic
 langchain-core
+langsmith
 fastapi
 uvicorn
 python-dotenv
