@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loan>
+  <loan_id>MAXEX-XML-001</loan_id>
+  <loan_amount>475000</loan_amount>
+  <ltv_ratio>76.5</ltv_ratio>
+  <loan_type>conventional</loan_type>
+  <occupancy_type>primary_residence</occupancy_type>
+  <borrower_name>Michael Scott</borrower_name>
+  <fico_score>755</fico_score>
+  <borrower_income>162000</borrower_income>
+  <dti_ratio>31.0</dti_ratio>
+  <property_value>620915</property_value>
+  <property_type>SFR</property_type>
+  <property_state>PA</property_state>
+  <interest_rate>6.75</interest_rate>
+  <loan_purpose>Refinance</loan_purpose>
+  <loan_term_months>360</loan_term_months>
+  <is_self_employed>false</is_self_employed>
+  <units>1</units>
+</loan>

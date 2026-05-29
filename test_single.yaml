@@ -1,0 +1,17 @@
+loan_id: MAXEX-YAML-001
+loan_amount: 540000
+ltv_ratio: 80.0
+loan_type: conventional
+occupancy_type: primary_residence
+borrower_name: Rachel Green
+fico_score: 768
+borrower_income: 185000
+dti_ratio: 29.5
+property_value: 675000
+property_type: SFR
+property_state: GA
+interest_rate: 6.625
+loan_purpose: Purchase
+loan_term_months: 360
+is_self_employed: false
+units: 1

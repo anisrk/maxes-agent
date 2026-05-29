@@ -1,0 +1,6 @@
+loan_id,loan_amount,ltv_ratio,loan_type,occupancy_type,borrower_name,fico_score,borrower_income,dti_ratio,property_value,property_type,property_state,interest_rate,loan_purpose,loan_term_months,is_self_employed,units
+MAXEX-CSV-001,485000,78.5,conventional,primary_residence,James Carter,742,145000,32.5,617834,SFR,TX,6.875,Purchase,360,false,1
+MAXEX-CSV-002,350000,92.0,conventional,primary_residence,Maria Lopez,598,72000,51.0,380434,Condo,FL,9.5,Purchase,360,false,1
+MAXEX-CSV-003,920000,65.0,conventional,primary_residence,Edward Fairbanks,812,620000,28.0,1415384,SFR,CA,7.375,Purchase,360,false,1
+MAXEX-CSV-004,310000,88.0,conventional,primary_residence,Derek Thompson,610,68000,47.0,352272,Townhouse,GA,8.25,Purchase,360,true,1
+MAXEX-CSV-005,720000,72.0,conventional,investment_property,Sandra Wu,755,185000,35.0,1000000,Multi-family,NY,7.125,Purchase,360,false,4
