@@ -1,3 +1,4 @@
+import os
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -7,22 +8,21 @@ from app.api import router
 
 app = FastAPI(
     title="MAXEX Mortgage Schema Validator Agent",
-    description="LangGraph-powered AI agent for MAXEX mortgage schema validation, contract generation, and schema drift detection.",
-    version="1.0.0",
+    description="LangGraph-powered AI agent for MAXEX mortgage schema validation",
+    version="1.0.0"
 )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["*"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 app.include_router(router)
 
-
 if __name__ == "__main__":
-    import os
     import uvicorn
     port = int(os.environ.get("PORT", 8000))
-    uvicorn.run("main:app", host="0.0.0.0", port=port)
+    uvicorn.run(app, host="0.0.0.0", port=port)
